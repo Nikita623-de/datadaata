@@ -1,0 +1,59 @@
+.request-modal {
+  overflow-y: initial !important;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__content {
+    border-radius: 15px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    background-color: var(--color-black);
+    width: 80%;
+    padding: 60px 100px;
+
+    @media (max-width: 880px) {
+      border-radius: 0;
+      max-height: 100vh;
+      height: 100%;
+      width: 100%;
+    }
+
+    @include mobile {
+      padding: 60px 15px;
+    }
+  }
+}
+
+.modal__input-admin {
+  font-size: 14px !important;
+  color: #fff !important;
+  border-bottom: 1px solid #fff !important;
+}
+
+.modal__input-label {
+  top: 5px;
+}
+
+.modal__input-admin:focus ~ .modal__input-label,
+.modal__input-admin:not(:placeholder-shown) ~ .modal__input-admin {
+  top: -15px !important;
+  font-size: 14px !important;
+  color: #db2512 !important;
+}

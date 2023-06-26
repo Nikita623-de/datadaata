@@ -1,0 +1,137 @@
+.tires-wheels {
+  overflow: auto;
+  height: 100%;
+  padding: 200px 0 100px;
+
+  @media (max-width: 700px) {
+    padding: 170px 0 50px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 150px 0 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    @media (max-width: 700px) {
+      margin-bottom: 70px;
+    }
+
+    @media (max-width: 1200px) {
+      justify-content: center;
+      gap: 30px;
+    }
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    @media (max-width: 700px) {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__block {
+    width: 560px;
+    height: 560px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1200px) {
+      width: 300px;
+      height: 300px;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font: var(--big-font);
+      font-size: 45px;
+
+      @media (max-width: 700px) {
+        font-size: 35px;
+      }
+    }
+  }
+
+  &__bottom {
+    &-title {
+      color: var(--color-black);
+      font: var(--big-font);
+      font-size: 30px;
+      padding-bottom: 20px;
+      position: relative;
+
+      @include small-tablet {
+        font-size: 20px;
+      }
+
+      @media (max-width: 700px) {
+        font-size: 17px;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 300px;
+        height: 3px;
+        background-color: var(--color-black);
+      }
+    }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    max-width: 910px;
+    float: right;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-top: 35px;
+    color: var(--color-black);
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 12px;
+    }
+  }
+}

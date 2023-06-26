@@ -1,0 +1,115 @@
+.admin {
+  padding: 180px 0 50px;
+
+  &__menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__height,
+  &__vilet,
+  &__dium,
+  &__disk,
+  &__krep_quan,
+  &__type,
+  &__width_disk,
+  &__diametr_disk,
+  &__diametr_disk_krep,
+  &__width,
+  &__brand,
+  &__brand_disk,
+  &__index,
+  &__speed,
+  &__thorn,
+  &__seasonality,
+  &__product,
+  &__diametr {
+    &--open {
+      display: flex !important;
+      gap: 10px;
+    }
+    &--close {
+      display: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__input {
+    &-file {
+      cursor: pointer;
+      padding: 20px 12px !important;
+    }
+  }
+
+  &__btn {
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 2px solid var(--color-black);
+    padding: 30px 0;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 25px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+    &:hover {
+      color: #ffffff;
+      background-color: var(--color-black);
+    }
+
+    &:active {
+      background-color: var(--color-orange);
+      color: #ffffff;
+      border: 2px solid var(--color-orange);
+    }
+  }
+
+  &__modal {
+    display: flex;
+    flex-direction: column;
+    gap: 50px 0;
+
+    &-title {
+      font: var(--small-title-font);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 0 10px;
+    align-items: center;
+    justify-content: center;
+    &--add {
+      font-size: 25px;
+      border-radius: 15px;
+      padding: 18px 30px;
+      background-color: green;
+      color: #fff;
+    }
+    &--hide,
+    &--delete {
+      font-size: 25px;
+      border-radius: 15px;
+      padding: 18px 30px;
+      background-color: var(--color-orange);
+      color: #fff;
+    }
+    &--hide {
+      background-color: darkred;
+    }
+  }
+}
+
+.btn-add {
+  width: 100%;
+  color: var(--color-black);
+}

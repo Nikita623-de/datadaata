@@ -1,0 +1,54 @@
+.form__column {
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0;
+  margin-bottom: 60px;
+}
+
+.form__group {
+  position: relative;
+  z-index: 1;
+}
+
+.form__input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  transition: 0.3s;
+  color: #fff;
+  min-width: 100%;
+  padding-bottom: 3px;
+  font: inherit;
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.form__lable {
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  transition: 0.3s;
+  left: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+
+  @include mobile {
+    font-size: 17px;
+  }
+}
+
+.form__input:focus {
+  border-bottom: 1px solid #db2512;
+}
+
+.form__input:focus ~ .form__lable,
+.form__input:not(:placeholder-shown) ~ .form__lable {
+  top: -18px;
+  font-size: 14px;
+  color: #e0e0e0;
+}

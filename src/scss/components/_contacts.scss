@@ -1,0 +1,112 @@
+.contacts {
+  padding: 67px 0;
+  @include mobile {
+    padding: 40px 0;
+  }
+  background: var(--color-black);
+  position: relative;
+  bottom: -1px;
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include avarage-tablet {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -100px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+    }
+  }
+
+  &__subtitle {
+    font-size: 27px;
+    line-height: 150%;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+
+    @include mobile {
+      font-size: 25px;
+    }
+  }
+
+  &__link {
+    font: var(--middle-font);
+    color: #b7b7b7;
+    display: block;
+    transition: color 0.3s ease-in-out;
+    @include mobile {
+      font-size: 17px;
+    }
+
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+
+  &-page {
+    padding: 167px 0 67px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -27px;
+      left: 0;
+      right: 0;
+      max-width: 1200px;
+      display: inline-block;
+      margin: 0 auto;
+      height: 1px;
+      background-color: #ffffff;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 100px;
+      left: 0;
+      right: 0;
+      max-width: 1200px;
+      display: inline-block;
+      margin: 0 auto;
+      width: 100%;
+      height: 1px;
+      background-color: #ffffff;
+    }
+
+    & .contacts__inner::after {
+      display: none;
+    }
+  }
+}
+
+#map {
+  margin-top: 100px;
+  filter: brightness(70%);
+  -ms-filter: brightness(70%);
+  -webkit-filter: brightness(70%);
+  -moz-filter: brightness(70%);
+  -o-filter: brightness(70%);
+}
+
+// <span className="footer__link">
+//               Наименование компании/ИП ВОЛОШАНОВСКИЙАРТУРСЕРГЕЕВИЧ (ИП)
+//             </span>
+//             <span className="footer__link">ИНН компании/ИП 591794638027</span>
